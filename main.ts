@@ -1,3 +1,10 @@
+let keyboardCursor: game.LedSprite = null
+let keyboardReturnValue = ""
+let Row1: string[] = []
+let Row2: string[] = []
+let Row3: string[] = []
+let Row4: string[] = []
+let Row5: string[] = []
 function displayKeyboard () {
     keyboardCursor = game.createSprite(0, 0)
     keyboardReturnValue = ""
@@ -71,11 +78,3 @@ function displayKeyboard () {
     keyboardCursor.delete()
     return keyboardReturnValue
 }
-let Row5: string[] = []
-let Row4: string[] = []
-let Row3: string[] = []
-let Row2: string[] = []
-let Row1: string[] = []
-let keyboardReturnValue = ""
-let keyboardCursor: game.LedSprite = null
-basic.showString("" + (displayKeyboard()))

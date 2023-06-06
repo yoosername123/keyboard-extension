@@ -1,5 +1,4 @@
-//Keep it straight
-//%icon = "\uf0a4"
+
 namespace keyboard {
     //% blockId=keyboarddisplaykeyboard
     //% block="Show Keyboard"

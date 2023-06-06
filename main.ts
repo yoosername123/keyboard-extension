@@ -1,3 +1,5 @@
+//Keep it straight
+//% color="#51e879"
 namespace keyboard {
     //% blockId=keyboarddisplaykeyboard
     //% block="Show Keyboard"

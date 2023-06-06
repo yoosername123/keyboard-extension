@@ -1,4 +1,3 @@
-//% color="#51e879"
 namespace keyboard {
     //% blockId=keyboarddisplaykeyboard
     //% block="Show Keyboard"
@@ -83,5 +82,11 @@ namespace keyboard {
         keyboardCursor.delete()
         return keyboardReturnValue
     }
-
+    //% blockId=keyboarddisplaykeyboard
+    //% block="Show Numpad"
+    //% color="#51e879"
+    export function displayNumpad() : number {
+        
+        return 0;
+    }
 }

@@ -11,7 +11,6 @@ namespace keyboard {
         let Row4: string[] = []
         let Row5: string[] = []
         keyboardCursor = game.createSprite(0, 0)
-        keyboardReturnValue = ""
         Row1 = [
             "A",
             "B",
@@ -82,11 +81,30 @@ namespace keyboard {
         keyboardCursor.delete()
         return keyboardReturnValue
     }
+    
     //% blockId=keyboarddisplaynumpad
     //% block="Show Numpad"
     //% color="#51e879"
     export function displayNumpad() : number {
-        
-        return 0;
+        let numpadCursor: game.LedSprite = null
+        let numpadReturnValue = 0
+        let Row1: number[] = []
+        let Row2: number[] = []
+        numpadCursor = game.createSprite(0, 0);
+        Row1 = [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+        Row2 = [
+            6,
+            7,
+            8,
+            9,
+            0
+        ]
+        return numpadReturnValue;
     }
 }

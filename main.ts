@@ -1,4 +1,3 @@
-
 namespace keyboard {
     //% blockId=keyboarddisplaykeyboard
     //% block="Show Keyboard"

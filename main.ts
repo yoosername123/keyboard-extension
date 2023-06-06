@@ -87,7 +87,7 @@ namespace keyboard {
     //% color="#51e879"
     export function displayNumpad() : number {
         let numpadCursor: game.LedSprite = null
-        let numpadReturnValue = 0
+        let numpadReturnValue = ""
         let Row1: number[] = []
         let Row2: number[] = []
         numpadCursor = game.createSprite(0, 0);
@@ -105,6 +105,34 @@ namespace keyboard {
             9,
             0
         ]
-        return numpadReturnValue;
+        while (true) {
+            if (input.isGesture(Gesture.LogoDown)) {
+                numpadCursor.change(LedSpriteProperty.Y, -1)
+                basic.pause(200)
+            } else if (input.isGesture(Gesture.LogoUp)) {
+                numpadCursor.change(LedSpriteProperty.Y, 1)
+                basic.pause(200)
+            } else if (input.isGesture(Gesture.TiltLeft)) {
+                numpadCursor.change(LedSpriteProperty.X, -1)
+                basic.pause(200)
+            } else if (input.isGesture(Gesture.TiltRight)) {
+                numpadCursor.change(LedSpriteProperty.X, 1)
+                basic.pause(200)
+            }
+            if (input.buttonIsPressed(Button.AB)) {
+                break;
+            }
+            if (input.buttonIsPressed(Button.A)) {
+                if (numpadCursor.get(LedSpriteProperty.X) == 0) {
+                    numpadReturnValue = numpadReturnValue + Row1[numpadCursor.get(LedSpriteProperty.Y)]
+                } else if (numpadCursor.get(LedSpriteProperty.X) == 1) {
+                    numpadReturnValue = numpadReturnValue + Row2[numpadCursor.get(LedSpriteProperty.Y)]
+                }
+                }
+                basic.pause(100)
+            }
+        
+        numpadCursor.delete()
+        return parseInt(numpadReturnValue)
     }
 }

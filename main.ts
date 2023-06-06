@@ -82,7 +82,7 @@ namespace keyboard {
         keyboardCursor.delete()
         return keyboardReturnValue
     }
-    //% blockId=keyboarddisplaykeyboard
+    //% blockId=keyboarddisplaynumpad
     //% block="Show Numpad"
     //% color="#51e879"
     export function displayNumpad() : number {

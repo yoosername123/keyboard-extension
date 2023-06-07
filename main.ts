@@ -1,9 +1,8 @@
-//%color="51e879"
 namespace keyboard {
     //% blockId=keyboarddisplaykeyboard
     //% block="Show Keyboard"
     //% color="#51e879"
-    export function displayKeyboard() : string {
+    export function displayKeyboard(limit?:number) : string {
         let keyboardCursor: game.LedSprite = null
         let keyboardReturnValue = ""
         let Row1: string[] = []

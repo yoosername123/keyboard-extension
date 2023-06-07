@@ -1,5 +1,4 @@
-//Keep it straight
-//% color="#51e879"
+//%color="51e879"
 namespace keyboard {
     //% blockId=keyboarddisplaykeyboard
     //% block="Show Keyboard"
@@ -90,17 +89,17 @@ namespace keyboard {
     export function displayNumpad() : number {
         let numpadCursor: game.LedSprite = null
         let numpadReturnValue = ""
-        let Row1: number[] = []
-        let Row2: number[] = []
+        let Row12: number[] = []
+        let Row22: number[] = []
         numpadCursor = game.createSprite(0, 0);
-        Row1 = [
+        Row12 = [
             1,
             2,
             3,
             4,
             5
         ]
-        Row2 = [
+        Row22 = [
             6,
             7,
             8,
@@ -126,9 +125,9 @@ namespace keyboard {
             }
             if (input.buttonIsPressed(Button.A)) {
                 if (numpadCursor.get(LedSpriteProperty.X) == 0) {
-                    numpadReturnValue = numpadReturnValue + Row1[numpadCursor.get(LedSpriteProperty.Y)]
+                    numpadReturnValue = numpadReturnValue + Row12[numpadCursor.get(LedSpriteProperty.Y)]
                 } else if (numpadCursor.get(LedSpriteProperty.X) == 1) {
-                    numpadReturnValue = numpadReturnValue + Row2[numpadCursor.get(LedSpriteProperty.Y)]
+                    numpadReturnValue = numpadReturnValue + Row22[numpadCursor.get(LedSpriteProperty.Y)]
                 }
                 }
                 basic.pause(100)

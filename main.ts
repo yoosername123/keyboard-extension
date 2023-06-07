@@ -61,19 +61,45 @@ namespace keyboard {
                 basic.pause(200)
             }
             if (input.buttonIsPressed(Button.AB)) {
-                break;
+                if (keyboardReturnValue.length <= limit) {
+                    break;
+                }
+                
             }
             if (input.buttonIsPressed(Button.A)) {
                 if (keyboardCursor.get(LedSpriteProperty.X) == 0) {
-                    keyboardReturnValue = "" + keyboardReturnValue + Row1[keyboardCursor.get(LedSpriteProperty.Y)]
+                    if (limit !== undefined) {
+                        if (keyboardReturnValue.length < limit) {
+                            keyboardReturnValue = "" + keyboardReturnValue + Row1[keyboardCursor.get(LedSpriteProperty.Y)]
+                        }
+                    }
+                    else { keyboardReturnValue = "" + keyboardReturnValue + Row1[keyboardCursor.get(LedSpriteProperty.Y)] }
                 } else if (keyboardCursor.get(LedSpriteProperty.X) == 1) {
-                    keyboardReturnValue = "" + keyboardReturnValue + Row2[keyboardCursor.get(LedSpriteProperty.Y)]
+                    if (limit !== undefined) {
+                        if (keyboardReturnValue.length < limit) {
+                            keyboardReturnValue = "" + keyboardReturnValue + Row2[keyboardCursor.get(LedSpriteProperty.Y)]
+                        }
+                    }
+                    else { keyboardReturnValue = "" + keyboardReturnValue + Row2[keyboardCursor.get(LedSpriteProperty.Y)] }
                 } else if (keyboardCursor.get(LedSpriteProperty.X) == 2) {
-                    keyboardReturnValue = "" + keyboardReturnValue + Row3[keyboardCursor.get(LedSpriteProperty.Y)]
+                    if (limit !== undefined) {
+                        if (keyboardReturnValue.length < limit) {
+                            keyboardReturnValue = "" + keyboardReturnValue + Row3[keyboardCursor.get(LedSpriteProperty.Y)]
+                        }
+                    }
+                    else { keyboardReturnValue = "" + keyboardReturnValue + Row3[keyboardCursor.get(LedSpriteProperty.Y)] }
                 } else if (keyboardCursor.get(LedSpriteProperty.X) == 3) {
-                    keyboardReturnValue = "" + keyboardReturnValue + Row4[keyboardCursor.get(LedSpriteProperty.Y)]
+                    if (limit !== undefined) {
+                        if (keyboardReturnValue.length < limit) {
+                            keyboardReturnValue = "" + keyboardReturnValue + Row4[keyboardCursor.get(LedSpriteProperty.Y)]
+                        }
+                    }
+                    else { keyboardReturnValue = "" + keyboardReturnValue + Row4[keyboardCursor.get(LedSpriteProperty.Y)] }
                 } else if (keyboardCursor.get(LedSpriteProperty.X) == 4) {
-                    keyboardReturnValue = "" + keyboardReturnValue + Row5[keyboardCursor.get(LedSpriteProperty.Y)]
+                    if (limit !== undefined) {
+                    if (keyboardReturnValue.length < limit) {
+                    keyboardReturnValue = "" + keyboardReturnValue + Row5[keyboardCursor.get(LedSpriteProperty.Y)]}}
+                    else { keyboardReturnValue = "" + keyboardReturnValue + Row5[keyboardCursor.get(LedSpriteProperty.Y)]}
                 }
                 basic.pause(100)
             }
